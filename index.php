@@ -139,6 +139,11 @@
     <section id="customers" class="section background-gray-lightest">
       <div class="container">
         <div class="row">
+          <div class="col-md-12">
+            <h2 class="heading">Some of the people I've worked with</h2>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-sm-6 col-md-3">
             <div class="customer"><img src="/img/clients/build.jpg" title="The BUILD Charity" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
           </div>
