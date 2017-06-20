@@ -7,15 +7,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
-    <!-- Bootstrap and Font Awesome css-->
-    <!-- we use cdn but you can also include local files located in css directory-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <!-- Google fonts - Open Sans-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,400italic">
-    <!-- theme stylesheet-->
     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -55,45 +50,9 @@
         </div>
       </div>
     </section>
-    <!-- portfolio-->
-    <section id="portfolio" class="no-padding-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="heading">Featured works</h2>
-            <p class="lead margin-bottom--big">See some of my work below</p>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="row no-space">
-          <div class="col-sm-4 col-md-3">
-            <div class="box"><a href="#" title=""><img src="http://placehold.it/650x650/3fbb86/ffffff" alt="" class="img-responsive"></a></div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-            <div class="box"><a href="#" title=""><img src="http://placehold.it/650x650/8e44ad/ffffff" alt="" class="img-responsive"></a></div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-            <div class="box"><a href="#" title=""><img src="http://placehold.it/650x650/e74c3c/ffffff" alt="" class="img-responsive"></a></div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-            <div class="box"><a href="#" title=""><img src="http://placehold.it/650x650/2c3e50/ffffff" alt="" class="img-responsive"></a></div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-            <div class="box"><a href="#" title=""><img src="http://placehold.it/650x650/d35400/ffffff" alt="" class="img-responsive"></a></div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-            <div class="box"><a href="#" title=""><img src="http://placehold.it/650x650/446CB3/ffffff" alt="" class="img-responsive"></a></div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-            <div class="box"><a href="#" title=""><img src="http://placehold.it/650x650/6C7A89/ffffff" alt="" class="img-responsive"></a></div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-            <div class="box"><a href="#" title=""><img src="http://placehold.it/650x650/663399/ffffff" alt="" class="img-responsive"></a></div>
-          </div>
-        </div>
-      </div>
-    </section>
+
+    <hr />
+
     <section id="about" class="section">
       <div class="container">
         <div class="row">
@@ -240,5 +199,6 @@
     <!-- Javascript files-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/front.js"></script>
   </body>
 </html>
