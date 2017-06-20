@@ -97,37 +97,37 @@
                 <div class="skill-item">
                   <div class="progress-title">Front-End Development</div>
                   <div class="progress">
-                    <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar progress-bar-skill1"><span class="sr-only">80</span></div>
+                    <div role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;" class="progress-bar"><span class="sr-only">85</span></div>
                   </div>
                 </div>
                 <div class="skill-item">
                   <div class="progress-title">Back-End Development</div>
                   <div class="progress">
-                    <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar progress-bar-skill2"><span class="sr-only">80</span></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="progress-title">Design</div>
-                  <div class="progress">
-                    <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" class="progress-bar progress-bar-skill3"><span class="sr-only">60</span></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="progress-title">Office 365</div>
-                  <div class="progress">
-                    <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;" class="progress-bar progress-bar-skill4"><span class="sr-only">70</span></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="progress-title">G Suite</div>
-                  <div class="progress">
-                    <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;" class="progress-bar progress-bar-skill5"><span class="sr-only">70</span></div>
+                    <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar"><span class="sr-only">80</span></div>
                   </div>
                 </div>
                 <div class="skill-item">
                   <div class="progress-title">Charity Solutions</div>
                   <div class="progress">
-                    <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar progress-bar-skill6"><span class="sr-only">80</span></div>
+                    <div role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;" class="progress-bar"><span class="sr-only">90</span></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="progress-title">Office 365</div>
+                  <div class="progress">
+                    <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" class="progress-bar"><span class="sr-only">60</span></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="progress-title">G Suite</div>
+                  <div class="progress">
+                    <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;" class="progress-bar"><span class="sr-only">70</span></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="progress-title">Design</div>
+                  <div class="progress">
+                    <div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;" class="progress-bar"><span class="sr-only">50</span></div>
                   </div>
                 </div>
               </div>
