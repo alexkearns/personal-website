@@ -139,23 +139,17 @@
     <section id="customers" class="section background-gray-lightest">
       <div class="container">
         <div class="row">
-          <div class="col-sm-4 col-md-2 col-xs-6">
-            <div class="customer"><img src="http://placehold.it/320x180/d35400/ffffff" title="Customer name" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
+          <div class="col-sm-6 col-md-3">
+            <div class="customer"><img src="/img/clients/build.jpg" title="The BUILD Charity" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
           </div>
-          <div class="col-sm-4 col-md-2 col-xs-6">
-            <div class="customer"><img src="http://placehold.it/320x180/d35400/ffffff" title="Customer name" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
+          <div class="col-sm-6 col-md-3">
+            <div class="customer"><img src="/img/clients/tkf.jpg" title="The Kearns Foundation" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
           </div>
-          <div class="col-sm-4 col-md-2 col-xs-6">
-            <div class="customer"><img src="http://placehold.it/320x180/d35400/ffffff" title="Customer name" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
+          <div class="col-sm-6 col-md-3">
+            <div class="customer"><img src="/img/clients/madgiraffe.jpg" title="MaD Giraffe" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
           </div>
-          <div class="col-sm-4 col-md-2 col-xs-6">
-            <div class="customer"><img src="http://placehold.it/320x180/d35400/ffffff" title="Customer name" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
-          </div>
-          <div class="col-sm-4 col-md-2 col-xs-6">
-            <div class="customer"><img src="http://placehold.it/320x180/d35400/ffffff" title="Customer name" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
-          </div>
-          <div class="col-sm-4 col-md-2 col-xs-6">
-            <div class="customer"><img src="http://placehold.it/320x180/d35400/ffffff" title="Customer name" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
+          <div class="col-sm-6 col-md-3">
+            <div class="customer"><img src="/img/clients/scouts.jpg" title="1st Great and Little Plumstead Scouts" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
           </div>
         </div>
       </div>
@@ -208,7 +202,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <p>&copy; Copyright 2017 Alex Kearns. All rights reserved. Portfolio items property of their respective owners.</p>
+              <p>&copy; Copyright 2017 Alex Kearns. All rights reserved.</p>
             </div>
           </div>
         </div>
