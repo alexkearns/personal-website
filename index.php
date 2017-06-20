@@ -22,6 +22,30 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <?php 
+
+            if(isset($_GET['contactSuccess'])){
+              if($_GET['contactSuccess'] == 'true'){
+                echo "<div class='alert alert-success alert-dismissable fade in'>
+                        <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                        <strong>Success!</strong> I've received your message and look forward to getting in touch soon!
+                      </div>";
+              }
+              else{
+                echo "<div class='alert alert-danger alert-dismissable fade in'>
+                        <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+                        <strong>Whoops!</strong> There was an issue submitting your contact form, please check the submission.
+                      </div>";
+              }
+            }
+
+          ?>
+        </div>
+      </div>
+    </div>
     <section id="intro" class="text-intro no-padding-bottom">
       <div class="container">
         <div class="row">
