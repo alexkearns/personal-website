@@ -62,9 +62,9 @@
           <div class="col-sm-12">
             <div class="row">
               <div class="col-sm-6 text-left">
-                <p>For most of my time, I'm a 3rd Year Computer Science Undergraduate at the University of East Anglia.</p> <p>Test</p>
-                <p>At the weekend, I work for John Lewis as a Sales Assistant.</p>
-                <p class="margin-bottom--big">I'm passionate about giving back to the community. I do this through my position as a Trustee for a family charity, <a href="http://www.kearnsfoundation.org.uk"><strong>The Kearns Foundation</strong></a> as well as an involvement in The Scout Association.</p>
+                <p>For most of my time, I'm a 3rd Year Computer Science Undergraduate at the University of East Anglia.</p>
+                <p>Alongside my degree, I work for <a target="_new" href="https://www.ubisend.com">ubisend</a> building bespoke AI-driven chatbots for sales, service and HR.</p>
+                <p class="margin-bottom--big">I'm passionate about giving back to the community. I do this through my position as a Trustee for a family charity, <a href="http://www.kearnsfoundation.org.uk">The Kearns Foundation</a> as well as an involvement in The Scout Association.</p>
                 <div class="row">
                   <div class="col-xs-8 col-xs-offset-2">
                     <p><img src="img/profile.jpg" alt="This is me" class="image img-circle img-responsive"></p>
