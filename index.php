@@ -62,7 +62,7 @@
           <div class="col-sm-12">
             <div class="row">
               <div class="col-sm-6 text-left">
-                <p>For most of my time, I'm a 3rd Year Computer Science Undergraduate at the University of East Anglia.</p>
+                <p>For most of my time, I'm a 3rd Year Computer Science Undergraduate at the University of East Anglia.</p> <p>Test</p>
                 <p>At the weekend, I work for John Lewis as a Sales Assistant.</p>
                 <p class="margin-bottom--big">I'm passionate about giving back to the community. I do this through my position as a Trustee for a family charity, <a href="http://www.kearnsfoundation.org.uk"><strong>The Kearns Foundation</strong></a> as well as an involvement in The Scout Association.</p>
                 <div class="row">
