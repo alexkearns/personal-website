@@ -1,8 +1,9 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
+import BlogPostInList from "../components/blog-post-in-list"
 import SEO from "../components/seo"
 
 class BlogIndex extends React.Component {
@@ -21,20 +22,13 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <div key={node.fields.slug}>
-              <h3>
-                <Link style={{ boxShadow: `none`, fontFamily: `IBM Plex Mono, monospace` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small style={{fontFamily: `IBM Plex Mono, monospace`}}>{node.frontmatter.date}</small>
-              <p
-                style={{fontFamily: `IBM Plex Mono, monospace`}}
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
+            <BlogPostInList
+              key={node.fields.slug}
+              link={node.fields.slug}
+              title={title}
+              date={node.frontmatter.date}
+              excerpt={node.frontmatter.description || node.excerpt}
+            />
           )
         })}
       </Layout>
