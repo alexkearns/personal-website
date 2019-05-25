@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import BlogPostInList from "../components/blog-post-in-list"
 import SEO from "../components/seo"
 
-class BlogIndex extends React.Component {
+class Index extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -36,7 +36,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+export default Index
 
 export const pageQuery = graphql`
   query {

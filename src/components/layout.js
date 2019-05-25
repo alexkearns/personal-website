@@ -29,7 +29,6 @@ const GlobalStyles = createGlobalStyle`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    font-family: 'IBM Plex Mono', monospace;
     color: #000000;
   }
   /* HTML5 display-role reset for older browsers */
@@ -58,23 +57,26 @@ const GlobalStyles = createGlobalStyle`
 `
 
 const TitleHeader = styled.header`
-  ${tw`p-4 uppercase bg-grey-lighter mb-10 w-full font-light text-left`};
+  ${tw`p-4 bg-flat-blue mb-10 w-full font-light text-left font-serif`};
+  & > a, a:hover, a:visited {
+    ${tw`text-white tracking-wide no-underline`}
+  }
   box-sizing: border-box;
 `;
 
 const Container = styled.div`
-  ${tw`flex flex-col items-center w-screen min-h-screen`};
-  & > * { 
-    max-width: 650px;
-  }
+  ${tw`flex flex-col items-center w-screen min-h-screen leading-normal font-sans`};
 `;
 
 const Main = styled.main`
-  ${tw`flex-grow`}
+  ${tw`flex-grow px-10 w-full md:w-2/3 lg:w-1/2`}
+  max-width: 650px;
+  box-sizing: border-box;
 `;
 
 const Footer = styled.footer`
   ${tw`text-xs mb-2 mt-10`}
+  max-width: 650px;
 `;
 
 class Layout extends React.Component {

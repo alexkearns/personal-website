@@ -12,19 +12,22 @@
     "gatsby": "^2.3.16",
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-google-analytics": "^2.0.18",
+    "gatsby-plugin-sharp": "^2.1.1",
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-remark-copy-linked-files": "^2.0.11",
     "gatsby-remark-images": "^2.0.6",
     "gatsby-remark-prismjs": "^3.2.8",
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-transformer-remark": "^2.3.8",
+    "gatsby-transformer-sharp": "^2.1.19",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "styled-components": "^4.2.0",
     "tailwind.macro": "^0.5.10",
-    "typeface-ibm-plex-mono": "0.0.61"
+    "typeface-playfair-display": "0.0.72",
+    "typeface-source-sans-pro": "0.0.54"
   },
   "devDependencies": {
     "prettier": "^1.17.0",

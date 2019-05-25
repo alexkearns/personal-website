@@ -1,2 +1,3 @@
 // custom typefaces
-import "typeface-ibm-plex-mono"
+import "typeface-playfair-display"
+import "typeface-source-sans-pro"
