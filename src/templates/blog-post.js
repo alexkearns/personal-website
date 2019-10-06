@@ -1,53 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import styled from "styled-components"
-import tw from "tailwind.macro"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-const Section = styled.section`
-  ${tw`leading-normal`}
-  & > .blog-post-date {
-    ${tw`block uppercase opacity-50 mb-6`}
-  }
-  & > div > * {
-    ${tw`mb-6`}
-  }
-  & ul {
-    list-style-type: disc;
-  }
-  & ol {
-    list-style-type: decimal;
-  }
-  & li > ul {
-    ${tw`ml-3 mt-1 mb-0`}
-  }
-  & li {
-    ${tw`mb-1`}
-  }
-  & > h1, h2, h3, h4, h5, h6 {
-    ${tw`mb-6 font-bold font-serif`}
-  }
-  & h1 {
-    ${tw`text-4xl mb-0`}
-  }
-  & h2 {
-    ${tw`text-3xl`}
-  }
-  & h3 {
-    ${tw`text-2xl`}
-  }
-  & h4 {
-    ${tw`text-xl`}
-  }
-  & h5 {
-    ${tw`text-lg`}
-  }
-  & h6 {
-    ${tw`text-base`}
-  }
-`;
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -61,37 +16,41 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <Section>
-          <h1>{post.frontmatter.title}</h1>
-          <p className={'blog-post-date'}>
-            {post.frontmatter.date}
-          </p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          <ul
+        <div 
+            className='h-32 sm:h-64 lg:h-128'
             style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
+                backgroundImage: "url('https://picsum.photos/2000')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center center'
             }}
-          >
+        />
+        <div className='container py-10 sm:py-16'>
+          <div className='mb-10 sm:mb-16'>
+            <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold'>{post.frontmatter.title}</h1>
+            <p className='text-md uppercase text-gray-600 font-medium'>
+                {post.frontmatter.date}
+            </p>
+          </div>
+          <div className='blog-post'>
+          <div className='md:ml-16 text-md' dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
+          <ul className='flex flex-wrap justify-between list-reset mt-10 lg:mt-16 text-gray-600'>
             <li>
               {previous && (
-                <Link to={previous.fields.slug} rel="prev">
+                <Link to={previous.fields.slug} rel="prev" className='hover:text-blue-500'>
                   ← {previous.frontmatter.title}
                 </Link>
               )}
             </li>
             <li>
               {next && (
-                <Link to={next.fields.slug} rel="next">
+                <Link to={next.fields.slug} rel="next" className='hover:text-blue-500'>
                   {next.frontmatter.title} →
                 </Link>
               )}
             </li>
           </ul>
-        </Section>
+        </div>
       </Layout>
     )
   }

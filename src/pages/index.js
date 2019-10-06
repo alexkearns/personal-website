@@ -1,36 +1,39 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
-import BlogPostInList from "../components/blog-post-in-list"
+import Header from "../components/header"
+import StandardPostInList from "../components/standard-post-in-list"
 import SEO from "../components/seo"
 
 class Index extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
         <SEO
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <BlogPostInList
-              key={node.fields.slug}
-              link={node.fields.slug}
-              title={title}
-              date={node.frontmatter.date}
-              excerpt={node.frontmatter.description || node.excerpt}
-            />
-          )
-        })}
+        <Header
+            title={'Develop for work, develop as a hobby, travel to switch off.'} 
+            subtitle={"Hey, I'm Alex. I'm passionate about developing scalable, secure software for all."}
+        />
+        <div className="container py-10 md:py-16 lg:py-20">
+            {posts.map(({ node }) => {
+                return (
+                    <StandardPostInList
+                    key={node.fields.slug}
+                    link={node.fields.slug}
+                    title={node.frontmatter.title || node.fields.slug}
+                    date={node.frontmatter.date}
+                    excerpt={node.frontmatter.description || node.excerpt}
+                    />
+                )
+            })}
+        </div>
       </Layout>
     )
   }
@@ -42,7 +45,7 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
-        title
+          author
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

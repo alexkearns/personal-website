@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-size: 18px;
+}
+
+.blog-post p, .blog-post ul, .blog-post ol, .blog-post blockquote {
+    @apply mb-6;
+    line-height: 2rem;
+}
+
+.blog-post ul {
+    @apply list-disc;
+}
+
+.blog-post ol {
+    @apply list-decimal;
+}
+
+.blog-post h2 {
+    @apply font-bold text-xl mb-1;
+}
+
+.blog-post h3 {
+    @apply font-bold text-lg mb-1;
+}
+
+.blog-post h4 {
+    @apply font-bold text-lg mb-1;
+}
+
+.blog-post h5 {
+    @apply font-bold text-lg mb-1;
+}
+
+.blog-post h6 {
+    @apply font-bold text-lg mb-1;
+}
+
+.blog-post blockquote {
+    @apply bg-gray-300 p-4 italic;
+    box-sizing: border-box;
+}
+
+.blog-post blockquote p:last-child {
+    @apply mb-0;
+}
+
+@screen md {
+    .blog-post h2 {
+        @apply text-3xl;
+    }
+
+    .blog-post h3 {
+        @apply text-2xl;
+    }
+
+    .blog-post h4 {
+        @apply text-xl;
+    }
+
+    .blog-post h5 {
+        @apply text-lg;
+    }
+
+    .blog-post h6 {
+        @apply text-base;
+    }
+}
