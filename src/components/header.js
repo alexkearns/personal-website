@@ -1,19 +1,29 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import Nav from "./nav";
 
 const Header = (props) => {
+  const Image = props.image;
   return (
-    <div className="bg-gray-200 py-10 md:py-16 lg:py-20">
-        <div className="container">
-            <div className="text-4xl font-bold leading-none w-full md:text-5xl lg:text-6xl lg:w-2/3">
-                {props.title}
+    <div className="header">
+      <div className='w-full h-full absolute z-10'>
+        <Image />
+      </div>
+      <div className="absolute bg-black w-full h-full z-10 opacity-75" />
+      <div className="z-20 flex-grow flex flex-col">
+        <Nav />
+        <div className="text-white flex-grow container flex justify-center items-center">
+          <div className="w-full">
+            <div className="font-serif text-3xl font-bold leading-tight w-full md:text-4xl lg:text-5xl lg:w-2/3">
+              {props.title}
             </div>
-            <div className="mt-5 w-full text-2xl font-light leading-tight lg:text-3xl lg:w-2/3">
-                {props.subtitle}
+            <div className="font-sans font-regular mt-5 w-full text-xl font-light leading-tight lg:text-2xl lg:w-2/3">
+              {props.subtitle}
             </div>
+          </div>
         </div>
+      </div>
     </div>
   )
 }
 
-export default Header
+export default Header;

@@ -1,14 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
-import Nav from './nav';
+import Header from "./header";
 
 class Layout extends React.Component {
   render() {
     const { children } = this.props
     return (
       <div>
-        {/* Header */}
-        <Nav />
+        <Header
+          image={this.props.image}
+          title={this.props.title}
+          subtitle={this.props.subtitle}
+        />
         {/* Body */}
         <div>{children}</div>
         {/* Footer */}

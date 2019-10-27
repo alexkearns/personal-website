@@ -3,7 +3,86 @@
 @tailwind utilities;
 
 html {
+    @apply font-sans;
     font-size: 18px;
+}
+
+h2 {
+    @apply text-4xl font-serif font-bold text-center;
+}
+
+h3 {
+    @apply text-3xl font-serif font-bold;
+}
+
+p {
+    @apply mb-2 leading-relaxed;
+}
+
+a {
+    @apply font-bold
+}
+
+a:hover {
+    @apply underline
+}
+
+.header {
+    @apply relative z-0 flex;
+    min-height: 75vh;
+}
+
+.home-what-do-i-do {
+    @apply w-full p-5 text-center;
+}
+
+.home-what-do-i-do-header {
+    @apply font-bold uppercase text-sm text-blue-500 tracking-wider;
+}
+
+.home-what-do-i-do-desc {
+    @apply mt-3 text-sm text-gray-500 leading-relaxed;
+}
+
+@screen md {
+    .home-what-do-i-do {
+        @apply w-1/3
+    }
+
+    .home-what-do-i-do:first-of-type {
+        @apply pl-0
+    }
+
+    .home-what-do-i-do:nth-of-type(3n) {
+        @apply pr-0
+    }
+}
+
+.post-in-list {
+    @apply w-full px-8 mb-12 flex-shrink-0 flex-grow-0;
+    box-sizing: border-box;
+}
+
+@screen md {
+    .post-in-list {
+        @apply w-1/3 mb-16
+    }
+    .post-in-list:first-of-type {
+        @apply pl-0
+    }
+    .post-in-list:nth-of-type(3n-1) {
+        @apply px-4
+    }
+    .post-in-list:nth-of-type(3n) {
+        @apply pr-0
+    }
+    .post-in-list:nth-of-type(3n+1) {
+        @apply pl-0
+    }
+}
+
+.blog-post > .description {
+    @apply font-bold mb-10 font-serif text-xl;
 }
 
 .blog-post p, .blog-post ul, .blog-post ol, .blog-post blockquote {
@@ -20,23 +99,23 @@ html {
 }
 
 .blog-post h2 {
-    @apply font-bold text-xl mb-1;
+    @apply font-serif font-bold text-xl mb-1 text-left;
 }
 
 .blog-post h3 {
-    @apply font-bold text-lg mb-1;
+    @apply font-serif font-bold text-lg mb-1 text-left;
 }
 
 .blog-post h4 {
-    @apply font-bold text-lg mb-1;
+    @apply font-serif font-bold text-lg mb-1 text-left;
 }
 
 .blog-post h5 {
-    @apply font-bold text-lg mb-1;
+    @apply font-serif font-bold text-lg mb-1 text-left;
 }
 
 .blog-post h6 {
-    @apply font-bold text-lg mb-1;
+    @apply font-serif font-bold text-lg mb-1 text-left;
 }
 
 .blog-post blockquote {

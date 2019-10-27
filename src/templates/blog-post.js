@@ -3,37 +3,38 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Img from "gatsby-image";
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const image = () => <Img
+      fluid={post.frontmatter.coverImage.childImageSharp.fluid}
+      sizes={{...post.frontmatter.coverImage.childImageSharp.fluid}}
+      style={{ height: '100%' }}
+    />;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout
+        image={image}
+        location={this.props.location}
+        title={post.frontmatter.title}
+        subtitle={post.frontmatter.date}
+      >
         <SEO
           title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
+          description={post.frontmatter.description}
         />
-        <div 
-            className='h-32 sm:h-64 lg:h-128'
-            style={{
-                backgroundImage: "url('https://picsum.photos/2000')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center center'
-            }}
-        />
-        <div className='container py-10 sm:py-16'>
-          <div className='mb-10 sm:mb-16'>
-            <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold'>{post.frontmatter.title}</h1>
-            <p className='text-md uppercase text-gray-600 font-medium'>
-                {post.frontmatter.date}
-            </p>
-          </div>
-          <div className='blog-post'>
-          <div className='md:ml-16 text-md' dangerouslySetInnerHTML={{ __html: post.html }} />
-          </div>
+        <div className='container pt-10 sm:pt-16 flex flex-col items-center'>
+          <div className='blog-post w-full md:w-2/3 lg:w-1/2'>
+            <div className='description'>
+              {post.frontmatter.description}
+            </div>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            </div>
+        </div>
+        <div className='container my-10'>
           <ul className='flex flex-wrap justify-between list-reset mt-10 lg:mt-16 text-gray-600'>
             <li>
               {previous && (
@@ -74,6 +75,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        coverImage {
+          childImageSharp {
+            fluid(maxWidth: 3000, quality: 100) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
       }
     }
   }
