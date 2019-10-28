@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - echo Install started on `date`
+      - npm install
+  pre_build:
+    commands:
+      - printenv > .env
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run clean
+      - npm run build
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - "**/*"
+  base-directory: "public"
