@@ -1,5 +1,6 @@
 import React from "react"
 import Header from "./header";
+import PrivacyPopup from "./privacy-pop-up";
 
 class Layout extends React.Component {
   render() {
@@ -21,6 +22,7 @@ class Layout extends React.Component {
                 © Copyright {new Date().getFullYear()}, Alex Kearns
             </div>
         </div>
+        <PrivacyPopup />
       </div>
     )
   }
