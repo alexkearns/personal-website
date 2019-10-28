@@ -28,7 +28,7 @@ a:hover {
 }
 
 .header {
-    @apply relative z-0 flex;
+    @apply relative z-0 flex pb-6;
     min-height: 75vh;
 }
 
