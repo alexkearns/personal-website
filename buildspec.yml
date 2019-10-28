@@ -5,8 +5,8 @@ phases:
     runtime-versions:
       nodejs: 10
     commands:
-      - echo Install started on `date`
-      - npm install
+      - echo CI install started on `date`
+      - npm ci
   pre_build:
     commands:
       - printenv > .env
