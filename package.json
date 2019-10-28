@@ -2,7 +2,7 @@
   "name": "alex-kearns-personal-site",
   "private": true,
   "description": "My personal website",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": "Alex Kearns <alex@alexkearns.co.uk>",
   "bugs": {
     "url": "https://github.com/alexkearns/personal-website/issues"
