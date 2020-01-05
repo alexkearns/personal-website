@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 html {
-    @apply font-sans;
-    font-size: 18px;
+    @apply font-mono;
+    font-size: 14px;
 }
 
 h2 {
-    @apply text-4xl font-serif font-bold text-center;
+    @apply text-4xl font-mono font-bold text-center;
 }
 
 h3 {
-    @apply text-3xl font-serif font-bold;
+    @apply text-3xl font-mono font-bold;
 }
 
 p {
@@ -33,7 +33,7 @@ a:hover {
 }
 
 .home-what-do-i-do {
-    @apply w-full p-5 text-center;
+    @apply w-full p-5 text-left;
 }
 
 .home-what-do-i-do-header {
@@ -82,12 +82,12 @@ a:hover {
 }
 
 .blog-post > .description {
-    @apply font-bold mb-10 font-serif text-xl;
+    @apply font-bold mb-10 font-mono text-xl;
 }
 
 .blog-post p, .blog-post ul, .blog-post ol, .blog-post blockquote {
     @apply mb-6;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 
 .blog-post ul {
@@ -99,23 +99,23 @@ a:hover {
 }
 
 .blog-post h2 {
-    @apply font-serif font-bold text-xl mb-1 text-left;
+    @apply font-mono font-bold text-xl mb-1 text-left;
 }
 
 .blog-post h3 {
-    @apply font-serif font-bold text-lg mb-1 text-left;
+    @apply font-mono font-bold text-lg mb-1 text-left;
 }
 
 .blog-post h4 {
-    @apply font-serif font-bold text-lg mb-1 text-left;
+    @apply font-mono font-bold text-lg mb-1 text-left;
 }
 
 .blog-post h5 {
-    @apply font-serif font-bold text-lg mb-1 text-left;
+    @apply font-mono font-bold text-lg mb-1 text-left;
 }
 
 .blog-post h6 {
-    @apply font-serif font-bold text-lg mb-1 text-left;
+    @apply font-mono font-bold text-lg mb-1 text-left;
 }
 
 .blog-post blockquote {

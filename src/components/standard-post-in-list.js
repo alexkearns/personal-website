@@ -10,7 +10,7 @@ const StandardPostInList = (props) => {
             <Image />
             <div className='mt-4'>
                 <div className='text-center text-gray-700 uppercase underline text-xs'>{props.date}</div>
-                <div className='font-serif text-center mt-3 text-lg'>{props.title}</div>
+                <div className='font-mono text-center mt-3 text-lg'>{props.title}</div>
             </div>
         </div>
       </Link>

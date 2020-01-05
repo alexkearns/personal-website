@@ -16,17 +16,9 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Playfair Display`,
-            variants: [`400`, `600`, `700`],
-          },
-          {
-            family: `Source Sans Pro`,
-            variants: [`300`, `300i`, `400`, `400i`, `600`, `600i`, `700`, `700i`]
-          },
-          {
-            family: `Source Code Pro`,
-            variants: [`400`, `400i`, `600`, `600i`, `700`, `700i`]
-          },
+            family: `IBM Plex Mono`,
+            variants: [`400`, `400i`, `700`, `700i`],
+          }
         ],
       }
     },

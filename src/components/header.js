@@ -13,10 +13,10 @@ const Header = (props) => {
         <Nav />
         <div className="text-white flex-grow container flex justify-center items-center">
           <div className="w-full">
-            <div className="font-serif text-3xl font-bold leading-tight w-full md:text-4xl lg:text-5xl lg:w-2/3">
+            <div className="text-3xl font-bold leading-tight w-full md:text-4xl lg:text-5xl lg:w-2/3">
               {props.title}
             </div>
-            <div className="font-sans font-regular mt-5 w-full text-xl font-light leading-tight lg:text-2xl lg:w-2/3">
+            <div className="mt-5 w-full text-xl font-light leading-tight lg:text-2xl lg:w-2/3">
               {props.subtitle}
             </div>
           </div>

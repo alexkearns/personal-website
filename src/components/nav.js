@@ -10,11 +10,11 @@ const Nav = () => {
         return (
           <div className="py-4 text-white">
             <div className='container'>
-              <div className='font-serif flex items-center justify-between uppercase font-regular'>
+              <div className='font-mono flex items-center justify-between uppercase font-regular'>
                 <div className="font-bold text-lg">
                   <Link to='/'>{title}</Link>
                 </div>
-                <ul className="text-gray-400 list-reset flex text-sm tracking-wider font-bold font-sans">
+                <ul className="text-gray-400 list-reset flex text-sm tracking-wider">
                   <li className="hover:underline mr-6"><Link to='/'>Home</Link></li>
                   <li className="hover:underline"><Link to='/articles'>Articles</Link></li>
                 </ul>
