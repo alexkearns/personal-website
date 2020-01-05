@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
 const PrivacyPopup = () => {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+  
   const initial = (window.localStorage.getItem('hide_privacy') !== 'yes');
   const [show, setShow] = useState(initial);
 
