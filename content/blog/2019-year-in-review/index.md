@@ -21,9 +21,21 @@ I finally got a proper holiday in July. Me and my girlfriend headed off to the S
 I really enjoyed taking loads of pictures on these trips and I'm going to get them up on this site soon!
 
 ### It all happened in August
-August was a huge month for me both personally and professionally. At work, I switched to the other side of the business. This came with new responsibility for developing a new software-as-a-service product in a solo team. On the personal side, this coincided with moving in with my girlfriend in Ipswich (the office is in Norwich, around 90 mins away). 
+August was a huge month for me both personally and professionally. At work, I switched to the other side of the business. This came with new responsibility for developing a new software-as-a-service product in a solo team. On the personal side, this coincided with moving in with my girlfriend in Ipswich (the office is in Norwich, around 90 mins away).
 
-The intention was to primarily work remotely with occasional trips into the office to touch base. Over time, I found that this particular scenario wasn't ticking all the boxes for me and I ended up spending more time in Norwich than I was in Ipswich when the end of the year got here. This has put pressure on me mentally, physically and financially and I'm still trying to work out the best solution. 
+The intention was to primarily work remotely with occasional trips into the office to touch base. Over time, I found that this particular scenario wasn't ticking all the boxes for me and I ended up spending more time in Norwich than I was in Ipswich when the end of the year got here. This has put pressure on me mentally, physically and financially and I'm still trying to work out the best solution.
+
+### Speaking
+One of the proudest parts of 2019 for me was getting the opportunity to speak and run sessions at a variety of events. I applied to speak at Laravel Live but unfortunately didn't get chosen. Later in the year however, I was given the opportunity to speak at the following:
+
+#### Ormiston Victory Academy
+A local school reached out to ubisend for someone to come and speak to their Year 12 Computer Science students about what the industry is really like, highlighting the variety of routes in as well as the vast number of roles that an interest in computing could lead to. This is something I'd like to do more of next year as it's something that I would've really valued when I was at that stage of my education.
+
+#### UEA Moneyhack
+Throughout the year, I was involved with the planning of the chatbot section of the [UEA Moneyhack](https://www.moneyhack.io/) programme. This culminated in the delivery of a session (in conjunction with Dean, ubisend's CEO and various UEA staff) to teach young people all about how chatbots can be used by businesses both in the conventional and unconventional ways. It also included a section on how they can build their own!
+
+#### Tech and Toast
+This opportunity came about as a bit of a surprise. I attended a Tech and Toast event in Ipswich, hosted by TechEast at the IJYI offices. I got speaking to the organiser of the event and it resulted in me hosting a Tech and Toast later in the year at the ubisend offices, giving a talk on a project between us, Archant and Google. You can see the talk [here](https://www.youtube.com/watch?v=mF4cX0dINFk). Apologies for the poor audio!
 
 ### Rounding out the year
 After Christmas, I took the plunge and bought myself some new camera kit to allow myself to get back into photography. I got a great deal on an ex-demo Fuji X-T2 which is a camera I've always had my eye on. I've taken it out on a few trips since buying it and I'm absolutely loving it ❤️
@@ -37,4 +49,4 @@ On a more positive note, I want 2020 to have lots more of the good parts of 2019
 
 2020 is going to be a challenge for sure, but I'm excited to see how it all pans out.
 
-**Alex**
+*Alex*
