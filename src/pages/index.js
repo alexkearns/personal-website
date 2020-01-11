@@ -25,16 +25,16 @@ class Index extends React.Component {
       >
         <SEO
           title="Home"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          keywords={[`blog`, `alex kearns`, `javascript`, `react`, `php`, `laravel`]}
         />
         <div className="container py-10 md:py-16 flex flex-col items-center sm:flex-row">
-          <div className='w-full mb-8 sm:mb-0 sm:w-1/2 sm:pr-6 lg:p-8'>
+          <div className='w-full mb-8 sm:mb-0 sm:w-1/2 sm:pr-6 lg:pr-8'>
             <Img
               fluid={data.profileImage.childImageSharp.fluid}
               sizes={{...data.profileImage.childImageSharp.fluid, aspectRatio: 2/2.5}}
             />
           </div>
-          <div className='w-full sm:w-2/3 sm:pl-6 lg:p-8 text-gray-700'>
+          <div className='w-full sm:w-2/3 sm:pl-6 lg:pl-8 text-gray-700'>
             <h3 className='text-gray-900 mb-5'>Basically, I'm a bit of a geek</h3>
             <p>
               Day to day, I'm working at <a target='_blank' rel="noopener noreferrer" href={'https://www.ubisend.com'}>ubisend</a> as the lead developer on a new software as a service product. I've been there a couple of years now. In a nutshell, ubisend are a leading UK chatbot company.
@@ -139,7 +139,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 3    
+      limit: 3
     ) {
       edges {
         node {
