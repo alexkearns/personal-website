@@ -31,7 +31,7 @@ class Index extends React.Component {
           {posts.map(({node}) => {
             const image = () => <Img
               fluid={node.frontmatter.coverImage.childImageSharp.fluid}
-              sizes={{...node.frontmatter.coverImage.childImageSharp.fluid, aspectRatio: 2/2.5}}
+              sizes={{...node.frontmatter.coverImage.childImageSharp.fluid, aspectRatio: 1}}
             />;
 
             return (
@@ -58,7 +58,7 @@ export const pageQuery = graphql`
     headerImage: file(relativePath: { eq: "blog.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -77,8 +77,8 @@ export const pageQuery = graphql`
             description
             coverImage {
               childImageSharp {
-                fluid(maxWidth: 3000, quality: 100) {
-                  ...GatsbyImageSharpFluid_tracedSVG
+                fluid(maxWidth: 1000, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
