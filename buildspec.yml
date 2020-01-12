@@ -18,11 +18,5 @@ phases:
       - echo Build completed on `date`
   post_build:
     commands:
-      - version="`date +%s`-$CODEBUILD_SOURCE_VERSION"
-      - aws s3 cp public "s3://alexkearns.co.uk/$version" --recursive
-      - config=$(aws cloudfront get-distribution-config --id $CLOUDFRONT_ID)
-      - etag=$(echo $config | jq -r '.ETag' | cat)
-      - distribution_config=$(echo $config | jq .DistributionConfig | cat)
-      - new_config=$(echo $distribution_config | jq --arg PATH "/$version" '.Origins.Items[0].OriginPath = $PATH' | cat)
-      - aws cloudfront update-distribution --id $CLOUDFRONT_ID --if-match $etag --distribution-config "$new_config"
+      - aws s3 sync ./public s3://alexkearns.co.uk --delete
       - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths "/*"
