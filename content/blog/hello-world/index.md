@@ -17,4 +17,4 @@ As I've mentioned elsewhere on the site, I love to travel. Over the last few yea
 
 I don't want to make the first blog post long and boring, so I'll draw it to a close here. I'm really looking forward to sharing my thoughts, experiences and some (hopefully) useful software development tips with you all.
 
-**Alex**
+*Alex*

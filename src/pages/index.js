@@ -9,7 +9,8 @@ import SEO from "../components/seo"
 class Index extends React.Component {
   render() {
     const {data} = this.props;
-    const posts = data.allMarkdownRemark.edges;
+    const posts = data.posts.edges;
+    const albums = data.photography.edges;
     const image = () => <Img
       fluid={data.headerImage.childImageSharp.fluid}
       sizes={{...data.headerImage.childImageSharp.fluid}}
@@ -45,7 +46,7 @@ class Index extends React.Component {
           </div>
         </div>
         <div className="bg-gray-900">
-          <div className="container py-10 md:py-32 flex flex-col items-center">
+          <div className="container py-10 md:py-32 flex flex-col">
             <h2 className="text-gray-100">What else do I do?</h2>
             <div className='flex flex-col md:flex-row w-full mt-8'>
               <div className='home-what-do-i-do'>
@@ -82,21 +83,23 @@ class Index extends React.Component {
           </div>
         </div>
         <div className="container flex flex-col items-center pb-10 pt-10 md:pt-16 md:pb-16">
+          <h2 className="w-full text-gray-900 mb-8">Latest Articles</h2>
           <div className='w-full flex flex-col md:flex-row flex-wrap'>
             {posts.map(({node}) => {
+              const post = node.childMarkdownRemark;
               const image = () => <Img
-                fluid={node.frontmatter.coverImage.childImageSharp.fluid}
-                sizes={{...node.frontmatter.coverImage.childImageSharp.fluid, aspectRatio: 1}}
+                fluid={post.frontmatter.coverImage.childImageSharp.fluid}
+                sizes={{...post.frontmatter.coverImage.childImageSharp.fluid, aspectRatio: 1}}
               />;
 
               return (
                 <StandardPostInList
                   image={image}
-                  key={node.fields.slug}
-                  link={node.fields.slug}
-                  title={node.frontmatter.title || node.fields.slug}
-                  date={node.frontmatter.date}
-                  excerpt={node.frontmatter.description || node.excerpt}
+                  key={post.fields.slug}
+                  link={post.fields.slug}
+                  title={post.frontmatter.title || post.fields.slug}
+                  date={post.frontmatter.date}
+                  excerpt={post.frontmatter.description || post.excerpt}
                 />
               )
             })}
@@ -107,6 +110,37 @@ class Index extends React.Component {
             to={'/articles'}
           >
             See all articles
+          </Link>
+        </div>
+        <hr />
+        <div className="container flex flex-col items-center pb-10 pt-10 md:pt-16 md:pb-16">
+          <h2 className="w-full text-gray-900 mb-8">Latest Photography</h2>
+          <div className='w-full flex flex-col md:flex-row flex-wrap'>
+            {albums.map(({node}) => {
+              const album = node.childMarkdownRemark;
+              const image = () => <Img
+                fluid={album.frontmatter.coverImage.childImageSharp.fluid}
+                sizes={{...album.frontmatter.coverImage.childImageSharp.fluid, aspectRatio: 1}}
+              />;
+
+              return (
+                <StandardPostInList
+                  image={image}
+                  key={album.fields.slug}
+                  link={album.fields.slug}
+                  title={album.frontmatter.title || album.fields.slug}
+                  date={album.frontmatter.date}
+                  excerpt={album.frontmatter.description || album.excerpt}
+                />
+              )
+            })}
+          </div>
+          <Link
+            className='-mt-3 block uppercase text-sm border-2 text-gray-700 border-gray-700 px-4
+              leading-loose py-1 font-bold hover:bg-gray-700 hover:text-gray-100'
+            to={'/albums'}
+          >
+            See all photography
           </Link>
         </div>
       </Layout>
@@ -137,24 +171,47 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 3
-    ) {
+    posts: allFile(filter: {sourceInstanceName: {eq: "blog"}, internal: {mediaType: {eq: "text/markdown"}}}, sort: {fields: [childMarkdownRemark___frontmatter___date], order: DESC}, limit: 3) {
       edges {
         node {
-          excerpt
-          fields {
-            slug
+          childMarkdownRemark {
+            excerpt
+            fields {
+              slug
+            }
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              title
+              description
+              coverImage {
+                childImageSharp {
+                  fluid(maxWidth: 1000, quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
           }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-            coverImage {
-              childImageSharp {
-                fluid(maxWidth: 1000, quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    photography: allFile(filter: {sourceInstanceName: {eq: "photography"}, internal: {mediaType: {eq: "text/markdown"}}}, sort: {fields: [childMarkdownRemark___frontmatter___date], order: DESC}, limit: 3) {
+      edges {
+        node {
+          childMarkdownRemark {
+            excerpt
+            fields {
+              slug
+            }
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              title
+              description
+              coverImage {
+                childImageSharp {
+                  fluid(maxWidth: 1000, quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
                 }
               }
             }

@@ -4,21 +4,19 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  return graphql(
+  const articles = graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
+        allFile(filter: {sourceInstanceName: {eq: "blog"}, internal: {mediaType: {eq: "text/markdown"}}}) {
           edges {
             node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
+              childMarkdownRemark {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
               }
             }
           }
@@ -31,17 +29,19 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create blog posts pages.
-    const posts = result.data.allMarkdownRemark.edges
+    const posts = result.data.allFile.edges
+    const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`)
 
-    posts.forEach((post, index) => {
+    posts.forEach(({ node }, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
+      const post = node.childMarkdownRemark;
 
       createPage({
-        path: post.node.fields.slug,
-        component: blogPost,
+        path: post.fields.slug,
+        component: blogPostTemplate,
         context: {
-          slug: post.node.fields.slug,
+          slug: post.fields.slug,
           previous,
           next,
         },
@@ -50,17 +50,71 @@ exports.createPages = ({ graphql, actions }) => {
 
     return null
   })
+
+  const photography = graphql(
+    `
+      {
+        allFile(filter: {sourceInstanceName: {eq: "photography"}, internal: {mediaType: {eq: "text/markdown"}}}) {
+          edges {
+            node {
+              childMarkdownRemark {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  ).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
+
+    // Create blog posts pages.
+    const posts = result.data.allFile.edges
+    const template = path.resolve(`./src/templates/gallery-post.js`)
+
+    posts.forEach(({ node }, index) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+      const post = node.childMarkdownRemark;
+
+      createPage({
+        path: post.fields.slug,
+        component: template,
+        context: {
+          slug: post.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+
+    return null
+  })
+
+  return Promise.all([articles, photography]);
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
+    const sourceName = getNode(node.parent).sourceInstanceName;
+    const slugMap = {
+      blog: 'articles',
+      photography: 'albums'
+    }
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: `/${slugMap[sourceName]}${value}`,
     })
   }
 }

@@ -148,3 +148,11 @@ a:hover {
         @apply text-base;
     }
 }
+
+.gallery {
+    @apply w-full flex-wrap flex mt-6
+}
+
+.gallery-item {
+    @apply w-full mb-4;
+}

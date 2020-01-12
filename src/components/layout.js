@@ -19,7 +19,7 @@ class Layout extends React.Component {
         {/* Footer */}
         <div className='text-xs py-5 bg-gray-200'>
             <div className='container'>
-                © Copyright {new Date().getFullYear()}, Alex Kearns
+                © Copyright {new Date().getFullYear()}, Alex Kearns. All Rights Reserved.
             </div>
         </div>
         <PrivacyPopup />

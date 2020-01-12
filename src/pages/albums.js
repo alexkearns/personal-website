@@ -9,7 +9,7 @@ import Img from "gatsby-image";
 class Index extends React.Component {
   render() {
     const {data} = this.props;
-    const posts = data.posts.edges;
+    const albums = data.albums.edges;
     const image = () => <Img
       fluid={data.headerImage.childImageSharp.fluid}
       sizes={{...data.headerImage.childImageSharp.fluid}}
@@ -19,30 +19,30 @@ class Index extends React.Component {
     return (
       <Layout
         location={this.props.location}
-        title={'Blog'}
-        subtitle={'Keep up to date with all my goings on.'}
+        title={'Photography'}
+        subtitle={'See the world through my eyes.'}
         image={image}
       >
         <SEO
-          title="All posts"
-          keywords={[`blog`, `alex kearns`, `articles`]}
+          title="All albums"
+          keywords={[`blog`, `alex kearns`, `photography`, `alex kearns photography`, `landscapes`]}
         />
         <div className="container flex flex-col md:flex-row pt-10 md:pt-16 flex-wrap">
-          {posts.map(({node}) => {
-            const post = node.childMarkdownRemark;
+          {albums.map(({node}) => {
+            const album = node.childMarkdownRemark;
             const image = () => <Img
-              fluid={post.frontmatter.coverImage.childImageSharp.fluid}
-              sizes={{...post.frontmatter.coverImage.childImageSharp.fluid, aspectRatio: 1}}
+              fluid={album.frontmatter.coverImage.childImageSharp.fluid}
+              sizes={{...album.frontmatter.coverImage.childImageSharp.fluid, aspectRatio: 1}}
             />;
 
             return (
               <StandardPostInList
                 image={image}
-                key={post.fields.slug}
-                link={post.fields.slug}
-                title={post.frontmatter.title || post.fields.slug}
-                date={post.frontmatter.date}
-                excerpt={post.frontmatter.description || post.excerpt}
+                key={album.fields.slug}
+                link={album.fields.slug}
+                title={album.frontmatter.title || album.fields.slug}
+                date={album.frontmatter.date}
+                excerpt={album.frontmatter.description || album.excerpt}
               />
             )
           })}
@@ -56,14 +56,14 @@ export default Index
 
 export const pageQuery = graphql`
   query {
-    headerImage: file(relativePath: { eq: "blog.jpg" }) {
+    headerImage: file(relativePath: { eq: "camera.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    posts: allFile(filter: {sourceInstanceName: {eq: "blog"}, internal: {mediaType: {eq: "text/markdown"}}}, sort: {fields: [childMarkdownRemark___frontmatter___date], order: DESC}, limit: 3) {
+    albums: allFile(filter: {sourceInstanceName: {eq: "photography"}, internal: {mediaType: {eq: "text/markdown"}}}, sort: {fields: [childMarkdownRemark___frontmatter___date], order: DESC}, limit: 3) {
       edges {
         node {
           childMarkdownRemark {
