@@ -56,7 +56,7 @@ export default Index
 
 export const pageQuery = graphql`
   query {
-    headerImage: file(relativePath: { eq: "blog.jpg" }) {
+    headerImage: file(relativePath: { eq: "mic.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 3000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
