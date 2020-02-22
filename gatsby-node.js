@@ -75,7 +75,7 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    // Create blog posts pages.
+    // Create photography pages.
     const posts = result.data.allFile.edges
     const template = path.resolve(`./src/templates/gallery-post.js`)
 
@@ -98,7 +98,54 @@ exports.createPages = ({ graphql, actions }) => {
     return null
   })
 
-  return Promise.all([articles, photography]);
+  const talks = graphql(
+    `
+      {
+        allFile(filter: {sourceInstanceName: {eq: "talks"}, internal: {mediaType: {eq: "text/markdown"}}}) {
+          edges {
+            node {
+              childMarkdownRemark {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  ).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
+
+    // Create talks pages.
+    const posts = result.data.allFile.edges
+    const template = path.resolve(`./src/templates/blog-post.js`)
+
+    posts.forEach(({ node }, index) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+      const post = node.childMarkdownRemark;
+
+      createPage({
+        path: post.fields.slug,
+        component: template,
+        context: {
+          slug: post.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+
+    return null
+  })
+
+  return Promise.all([articles, photography, talks]);
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -108,7 +155,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const sourceName = getNode(node.parent).sourceInstanceName;
     const slugMap = {
       blog: 'articles',
-      photography: 'albums'
+      photography: 'albums',
+      talks: 'talks'
     }
     const value = createFilePath({ node, getNode })
     createNodeField({

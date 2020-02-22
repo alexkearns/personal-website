@@ -17,7 +17,8 @@ const Nav = () => {
                 <ul className="text-gray-400 list-reset flex text-sm tracking-wider">
                   <li className="hover:underline mr-6"><Link to='/'>Home</Link></li>
                   <li className="hover:underline mr-6"><Link to='/articles'>Articles</Link></li>
-                  <li className="hover:underline"><Link to='/albums'>Photography</Link></li>
+                  <li className="hover:underline mr-6"><Link to='/albums'>Photography</Link></li>
+                  <li className="hover:underline"><Link to='/talks'>Talks</Link></li>
                 </ul>
               </div>
             </div>
