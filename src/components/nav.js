@@ -18,7 +18,8 @@ const Nav = () => {
                   <li className="hover:underline mr-6"><Link to='/'>Home</Link></li>
                   <li className="hover:underline mr-6"><Link to='/articles'>Articles</Link></li>
                   <li className="hover:underline mr-6"><Link to='/albums'>Photography</Link></li>
-                  <li className="hover:underline"><Link to='/talks'>Talks</Link></li>
+                  <li className="hover:underline mr-6"><Link to='/talks'>Talks</Link></li>
+                  <li className="hover:underline"><Link to='/contact'>Contact</Link></li>
                 </ul>
               </div>
             </div>

@@ -4,6 +4,11 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
+  createPage({
+    path: '/contact-me',
+    component: require.resolve('./src/pages/contact.js')
+  })
+
   const articles = graphql(
     `
       {
