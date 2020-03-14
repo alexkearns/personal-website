@@ -156,3 +156,27 @@ a:hover {
 .gallery-item {
     @apply w-full mb-4;
 }
+
+.form-group {
+    @apply mb-4;
+}
+
+.text-input {
+    @apply w-96 bg-gray-200 border border-transparent p-4;
+}
+
+.text-input.error{
+    @apply border-red-500;
+}
+
+.form-errors {
+    @apply text-red-500 text-sm uppercase
+}
+
+.form-submit {
+    @apply px-2 py-1 bg-gray-700 text-white
+}
+
+.form-submit:hover {
+    @apply bg-gray-900
+}
