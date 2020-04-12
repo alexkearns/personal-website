@@ -38,7 +38,7 @@ class Index extends React.Component {
           <div className='w-full sm:w-2/3 sm:pl-6 lg:pl-8 text-gray-700'>
             <h3 className='text-gray-900 mb-5'>Basically, I'm a bit of a geek</h3>
             <p>
-              Day to day, I'm working at <a target='_blank' rel="noopener noreferrer" href={'https://www.ubisend.com'}>ubisend</a> as the lead developer on a new software as a service product. I've been there a couple of years now. In a nutshell, ubisend are a leading UK chatbot company.
+              Day to day, I'm working at BT as a Cloud Software Architect. This means that I spend my days designing and implementing infrastructure for new software systems (both internal and customer). My specialty is in Amazon Web Services.
             </p>
             <p>
               The purpose of my website is to showcase some of the cool things I'm working on there, as well as outside, and to act as a record of what I've done in the past.
